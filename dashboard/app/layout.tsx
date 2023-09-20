@@ -1,4 +1,5 @@
 import './global.css';
+import { ThemeProvider } from "@el-test/ui-components/components/theme-provider"
 
 export const metadata = {
   title: 'Welcome to dashboard',
@@ -11,8 +12,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}  
+      </ThemeProvider>  
+      </body>
     </html>
   );
 }

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@el-test/ui-components": ["ui-components/src/index.ts"],
+      "@el-test/ui-components/*": ["ui-components/src/*"]
+    }
+  },
+}
